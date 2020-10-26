@@ -208,8 +208,7 @@ public class LauncherRecentsView extends RecentsView<QuickstepLauncher, Launcher
         super.setOverviewStateEnabled(enabled);
         if (enabled) {
             LauncherState state = getStateManager().getState();
-            boolean hasClearAllButton = (state.getVisibleElements(mContainer)
-                    & CLEAR_ALL_BUTTON) != 0;
+            boolean hasClearAllButton = false;
             boolean hasAddDeskButton = (state.getVisibleElements(mContainer)
                     & ADD_DESK_BUTTON) != 0;
             setDisallowScrollToClearAll(!hasClearAllButton);
